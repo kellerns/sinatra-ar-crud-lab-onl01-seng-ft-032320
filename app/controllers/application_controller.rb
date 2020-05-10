@@ -25,10 +25,10 @@ class ApplicationController < Sinatra::Base
   #   erb :index
   # end
   #
-  # get '/articles/:id' do
-  #   @article = Article.find_by_id(params[:id])
-  #   erb :show
-  # end
+  get '/articles/:id' do
+    @article = Article.find_by_id(params[:id])
+    erb :show
+  end
   #
   # get '/articles/:id/edit' do
   #   @article = Article.find(params[:id])
