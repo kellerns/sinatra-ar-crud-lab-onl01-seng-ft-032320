@@ -16,11 +16,22 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/articles' do
-    Article.acreate(params)
+    Article.create(params)
     redirect '/articles'
   end
 
   get '/articles' do
     @articles = Article.all
+    erb :index
   end
+
+  
+
+
+
+
+
+
+
+  
 end
