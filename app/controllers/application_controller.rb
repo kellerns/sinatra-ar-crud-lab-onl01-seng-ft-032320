@@ -25,7 +25,6 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
 
-  
 
 
 
@@ -33,5 +32,6 @@ class ApplicationController < Sinatra::Base
 
 
 
-  
+
+
 end
