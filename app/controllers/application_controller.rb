@@ -30,18 +30,18 @@ class ApplicationController < Sinatra::Base
     erb :show
   end
 
-  get '/articles/:id/edit' do
-    @article = Article.find(params[:id])
-    erb :edit
-  end
+  # get '/articles/:id/edit' do
+  #   @article = Article.find(params[:id])
+  #   erb :edit
+  # end
   #
-  # patch '/articles/:id' do
-  #   @article = Article.find_by_id(params[:id])
-  #   @article.name = params[:title]
-  #   @article.content = params[:content]
-  #   @article.save
-  #   erb :show
-  #
+  patch '/articles/:id' do
+    @article = Article.find_by_id(params[:id])
+    @article.name = params[:title]
+    @article.content = params[:content]
+    @article.save
+    erb :show
+
   #   ## id = params["id"]
   #   ## new_params = {}
   #   ## old_article = Article.find(id)
@@ -50,7 +50,7 @@ class ApplicationController < Sinatra::Base
   #   ## old_article.update(new_params)
   #   ##
   #   ## redirect "/articles/#{id}"
-  # end
+  end
   #
   # delete '/articles/:id/delete' do
   #   @article = Article.find_by_id(params[:id])
